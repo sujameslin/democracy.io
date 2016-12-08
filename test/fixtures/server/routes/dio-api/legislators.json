@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "bioguideId": "P000197",
+      "district": "12",
+      "title": "Rep",
+      "firstName": "Nancy",
+      "lastName": "Pelosi",
+      "state": "CA"
+    },
+    {
+      "bioguideId": "B000711",
+      "district": null,
+      "firstName": "Barbara",
+      "lastName": "Boxer",
+      "state": "CA",
+      "title": "Sen"
+    },
+    {
+      "bioguideId": "F000062",
+      "district": null,
+      "firstName": "Dianne",
+      "lastName": "Feinstein",
+      "state": "CA",
+      "title": "Sen"
+    }
+  ]
+}
+
