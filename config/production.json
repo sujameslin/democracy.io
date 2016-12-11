@@ -6,8 +6,9 @@
 
     "STATIC": {
       "maxAge": "86400000"
+    },
+    "REDIS": {
+      "URL": "redis://h:p9ddc6a91aa76b6146a2a5b1bdd174f0a46554f6307e903a2707b3e1b4896f6b8@ec2-54-83-62-222.compute-1.amazonaws.com:10369"
     }
-
-  }
-
+  },
 }

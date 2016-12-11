@@ -45,7 +45,10 @@ app.use(pathRe, ipThrottle(config.get('REQUEST_THROTTLING')));
 var RedisStore = connectRedis(session);
 // Default to the same ttl as used by the request throttle
 app.use(session({
-  store: new RedisStore({ttl: config.get('REQUEST_THROTTLING.THROTTLE.expiry') || 7 * 24 * 60 * 60}),
+  store: new RedisStore({
+    ttl: config.get('REQUEST_THROTTLING.THROTTLE.expiry') || 7 * 24 * 60 * 60,
+    url: config.get('REDIS_URL')
+  }),
   key: 'connect.sid',
   secret: config.get('CREDENTIALS').get('SESSION.SECRET'),
   cookie: {
