@@ -6,7 +6,8 @@
   "scripts": {
     "test": "gulp test",
     "build": "gulp build",
-    "build:prod": "gulp build:prod"
+    "build:prod": "gulp build:prod",
+    "prestart": "npm run build:prod"
   },
   "engines": {
     "node": "0.12.17"
