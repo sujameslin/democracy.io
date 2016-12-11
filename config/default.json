@@ -11,6 +11,8 @@
       "maxAge": 0
     },
 
+    "REDIS_URL": "localhost",
+
     "API": {
       "POTC_BASE_URL": "https://congressforms.eff.org/",
       "SMARTY_STREETS": {
