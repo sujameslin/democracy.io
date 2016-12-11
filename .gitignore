@@ -31,3 +31,5 @@ node_modules
 
 # Redis database file
 dump.rdb
+
+.idea
