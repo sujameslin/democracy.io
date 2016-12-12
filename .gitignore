@@ -33,3 +33,5 @@ node_modules
 dump.rdb
 
 .idea
+
+.DS_Store
