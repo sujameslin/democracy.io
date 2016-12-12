@@ -103,6 +103,7 @@ See the [www/README.md](/www/README.md) for details
 ## Deploy to Heroku
 
  - Install [heroku cli](https://devcenter.heroku.com/articles/heroku-cli) and create new heroku app.
+   - Run `heroku config:set NPM_CONFIG_PRODUCTION=false` to ask heroku to install dev depndencies.
  - Clone the repository from [here](https://github.com/sujameslin/democracy.io)
 Note that this repository is a bit different with original [one](https://github.com/EFForg/democracy.io).
 It has more strict dependency version(dependency name: angular-inview) than original one.
