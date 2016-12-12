@@ -11,7 +11,7 @@
       "maxAge": 0
     },
 
-    "REDIS_URL": "localhost",
+    "REDIS_URL": "redis://127.0.0.1:6379",
 
     "API": {
       "POTC_BASE_URL": "https://congressforms.eff.org/",

@@ -13,6 +13,7 @@ var path = require('path');
 var serveFavicon = require('serve-favicon');
 var serveStatic = require('serve-static');
 var session = require('express-session');
+var redisURL = require('redis-url');
 
 // NOTE: The app currently assumes a flat deploy with the server serving static assets directly.
 var BUILD_DIR = path.join(__dirname, '../.build');
@@ -47,7 +48,7 @@ var RedisStore = connectRedis(session);
 app.use(session({
   store: new RedisStore({
     ttl: config.get('REQUEST_THROTTLING.THROTTLE.expiry') || 7 * 24 * 60 * 60,
-    url: config.get('REDIS_URL')
+    client: redisURL.connect(config.get('REDIS_URL'))
   }),
   key: 'connect.sid',
   secret: config.get('CREDENTIALS').get('SESSION.SECRET'),
