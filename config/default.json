@@ -23,12 +23,12 @@
 
     "CREDENTIALS": {
       "POTC": {
-        "DEBUG_KEY": ""
+        "DEBUG_KEY": "blackdiamond-democracy.io"
       },
 
       "SMARTY_STREETS": {
-        "ID": "",
-        "TOKEN": ""
+        "ID": "35ff4e1f-b9ed-c97f-ee21-ba91b98e8329",
+        "TOKEN": "QyEGDdlSIFkmTiMuD4dd"
       },
 
       "EFF_CIVIC_CRM": {
