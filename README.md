@@ -15,6 +15,7 @@ Express & Angular app for sending messages to Senate and House members
 * [Run tests](#run-tests)
 * [Running the server](#running-the-server)
 * [Angular App](#angular-app)
+* [Deploy to Heroku](#deploy-to-heroku)
 
 ## Background Info
 
@@ -98,3 +99,20 @@ For more instructions on setting up a production server, check [/deployment/READ
 ## Angular app
 
 See the [www/README.md](/www/README.md) for details
+
+## Deploy to Heroku
+
+ - Install [heroku cli](https://devcenter.heroku.com/articles/heroku-cli) and create new heroku app.
+ - Clone the repository from [here](https://github.com/sujameslin/democracy.io)
+Note that this repository is a bit different with original [one](https://github.com/EFForg/democracy.io).
+It has more strict dependency version(dependency name: angular-inview) than original one.
+ - Install Redis
+    - Install redis on heroku app by visiting [here](https://elements.heroku.com/addons/heroku-redis)
+    - Get REDIS URL by running `heroku config:get REDIS_URL` on your teminal(command tool)
+    - Copy and paste into config/production.json
+        Replace the old redis url with copied one at line #11
+        Update old config from line #15~#17 with new one(you can extract HOSTNAME, PORT, PASS from REDIS_URL. Note that redis url format is redis://:password@hostname:port)
+ - Add heroku git remote
+    Run `heroku git:remote -a [app name]`
+ - Deploy to Heroku
+    Run `git push heroku`
