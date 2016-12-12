@@ -6,7 +6,6 @@ var helpers = require('../helpers/api');
 var models = require('../../../models');
 
 var api = function ($http, dioConfig) {
-
   var siteConfig = dioConfig.SITE;
 
   return {
@@ -18,10 +17,10 @@ var api = function ($http, dioConfig) {
     makeAPICall: function(opts, cb) {
       opts.apiCall = true;
       $http(opts)
-        .success(function(data) {
+        .then(function(data) {
           cb(null, data);
         })
-        .error(function(data) {
+        .catch(function(data) {
           cb(data, null);
         });
     },
