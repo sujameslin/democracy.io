@@ -17,11 +17,11 @@ var api = function ($http, dioConfig) {
     makeAPICall: function(opts, cb) {
       opts.apiCall = true;
       $http(opts)
-        .then(function(data) {
-          cb(null, data);
+        .then(function(response) {
+          cb(null, response.data);
         })
-        .catch(function(data) {
-          cb(data, null);
+        .catch(function(response) {
+          cb(response.data, null);
         });
     },
 
